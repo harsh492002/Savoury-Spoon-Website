@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-ivory: #fdf8f3;
+  --color-ivory-deep: #f5ebe0;
+  --color-saffron: #e8871e;
+  --color-saffron-dark: #c96a0a;
+  --color-terracotta: #c1440e;
+  --color-maroon: #5c1a1a;
+  --color-espresso: #2d1810;
+  --color-mint: #1a8a7d;
+  --color-cream-card: #fffcf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: #4a3728;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(232, 135, 30, 0.3);
+  color: var(--color-espresso);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-saffron), var(--color-terracotta));
+  border-radius: 99px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Grain texture overlay utility */
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Decorative spice ring */
+.spice-ring {
+  background: conic-gradient(
+    from 0deg,
+    #e8871e,
+    #c1440e,
+    #5c1a1a,
+    #1a8a7d,
+    #e8871e
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #c96a0a 0%,
+    #e8871e 25%,
+    #c1440e 50%,
+    #e8871e 75%,
+    #c96a0a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
