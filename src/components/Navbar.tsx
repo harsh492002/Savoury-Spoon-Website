@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react'
 const links = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '/menu', label: 'Menu' },
+  { href: '#menu', label: 'Menu' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -60,7 +60,7 @@ export default function Navbar() {
           </ul>
 
           <a
-            href="/menu"
+            href="#menu"
             className="hidden rounded-full bg-[#2d1810] px-5 py-2 text-sm font-semibold text-[#fdf8f3] transition-all hover:bg-[#5c1a1a] hover:shadow-lg md:inline-block"
           >
             View Menu
@@ -99,7 +99,7 @@ export default function Navbar() {
               ))}
               <li className="mt-1 border-t border-[#f5ebe0] pt-1">
                 <a
-                  href="/menu"
+                  href="#menu"
                   onClick={() => setMobileOpen(false)}
                   className="block rounded-2xl bg-[#2d1810] px-5 py-3.5 text-center text-sm font-semibold text-white"
                 >
