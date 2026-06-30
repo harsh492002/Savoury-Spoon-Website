@@ -1,17 +1,19 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 
 const links = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
-  { href: '#menu', label: 'Menu' },
   { href: '#contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+  const isMenuPage = location.pathname === '/menu'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -36,7 +38,7 @@ export default function Navbar() {
               : 'bg-white/60 backdrop-blur-md'
           }`}
         >
-          <a href="#home" className="group flex items-center gap-2.5">
+          <Link to="/" className="group flex items-center gap-2.5">
             <div className="relative flex h-9 w-9 items-center justify-center">
               <div className="spice-ring absolute inset-0 rounded-full opacity-80" />
               <span className="relative font-display text-sm font-bold text-[#5c1a1a]">S</span>
@@ -44,10 +46,10 @@ export default function Navbar() {
             <span className="hidden font-display text-lg font-semibold tracking-tight text-[#2d1810] sm:block">
               Savoury Spoon
             </span>
-          </a>
+          </Link>
 
           <ul className="hidden items-center gap-1 md:flex">
-            {links.map((link) => (
+            {!isMenuPage && links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -59,12 +61,21 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a
-            href="#menu"
-            className="hidden rounded-full bg-[#2d1810] px-5 py-2 text-sm font-semibold text-[#fdf8f3] transition-all hover:bg-[#5c1a1a] hover:shadow-lg md:inline-block"
-          >
-            View Menu
-          </a>
+          {isMenuPage ? (
+            <Link
+              to="/"
+              className="hidden rounded-full bg-[#2d1810] px-5 py-2 text-sm font-semibold text-[#fdf8f3] transition-all hover:bg-[#5c1a1a] hover:shadow-lg md:inline-block"
+            >
+              Back to Home
+            </Link>
+          ) : (
+            <Link
+              to="/menu"
+              className="hidden rounded-full bg-[#2d1810] px-5 py-2 text-sm font-semibold text-[#fdf8f3] transition-all hover:bg-[#5c1a1a] hover:shadow-lg md:inline-block"
+            >
+              View Menu
+            </Link>
+          )}
 
           <button
             type="button"
@@ -86,7 +97,7 @@ export default function Navbar() {
             className="fixed inset-x-4 top-20 z-40 overflow-hidden rounded-3xl border border-[#e8871e]/10 bg-white shadow-2xl md:hidden"
           >
             <ul className="flex flex-col p-3">
-              {links.map((link) => (
+              {!isMenuPage && links.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -98,13 +109,23 @@ export default function Navbar() {
                 </li>
               ))}
               <li className="mt-1 border-t border-[#f5ebe0] pt-1">
-                <a
-                  href="#menu"
-                  onClick={() => setMobileOpen(false)}
-                  className="block rounded-2xl bg-[#2d1810] px-5 py-3.5 text-center text-sm font-semibold text-white"
-                >
-                  View Menu
-                </a>
+                {isMenuPage ? (
+                  <Link
+                    to="/"
+                    onClick={() => setMobileOpen(false)}
+                    className="block rounded-2xl bg-[#2d1810] px-5 py-3.5 text-center text-sm font-semibold text-white"
+                  >
+                    Back to Home
+                  </Link>
+                ) : (
+                  <Link
+                    to="/menu"
+                    onClick={() => setMobileOpen(false)}
+                    className="block rounded-2xl bg-[#2d1810] px-5 py-3.5 text-center text-sm font-semibold text-white"
+                  >
+                    View Menu
+                  </Link>
+                )}
               </li>
             </ul>
           </motion.div>
