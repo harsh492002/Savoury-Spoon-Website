@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate-qr && tsc -b && vite build",
+    "build": "npm run generate-qr && tsc -b && vite build && copy docs\\index.html docs\\404.html",
     "generate-qr": "ts-node generate-qr.ts",
     "lint": "eslint .",
     "preview": "vite preview"

@@ -23,7 +23,7 @@ const img = (id: string) =>
 export const menuCategories: MenuCategory[] = [
   {
     id: 'the-egg',
-    chapter: 'Chapter 2',
+    chapter: 'Chapter 1',
     title: 'The Egg',
     subtitle: 'Fourteen signature egg preparations — bold, rustic, unforgettable',
     accent: '#e8871e',
@@ -120,7 +120,7 @@ export const menuCategories: MenuCategory[] = [
   },
   {
     id: 'fast-food',
-    chapter: 'Chapter 3',
+    chapter: 'Chapter 2',
     title: 'Fast Food & Appetizers',
     subtitle: 'Crispy bites and loaded favourites to kick off your meal',
     accent: '#c1440e',
@@ -157,7 +157,7 @@ export const menuCategories: MenuCategory[] = [
   },
   {
     id: 'beverages',
-    chapter: 'Chapter 4',
+    chapter: 'Chapter 3',
     title: 'Hot & Cold Beverages',
     subtitle: 'Warm cups and cool sips to pair with every craving',
     accent: '#1a8a7d',
@@ -188,7 +188,7 @@ export const menuCategories: MenuCategory[] = [
   },
   {
     id: 'street-food',
-    chapter: 'Chapter 5',
+    chapter: 'Chapter 4',
     title: 'Street Food',
     subtitle: 'Iconic Indian street classics, served hot and fresh',
     accent: '#5c1a1a',
