@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 
 const showcaseImages = [
   {
-    src: '/Images/EggDish6.jpg',
+    src: '/Egg Items/SavourySpoon_ChefSpecial.jpg',
     alt: 'Masala omelet',
     label: 'The Egg',
     rotate: '-rotate-3',
@@ -11,7 +11,7 @@ const showcaseImages = [
     position: 'left-[2%] top-[8%] w-[38%]',
   },
   {
-    src: '/Images/Vadapav1.jpg',
+    src: '/Street Food/Vadapav.jpg',
     alt: 'Vada pav',
     label: 'Street Food',
     rotate: 'rotate-2',
@@ -19,7 +19,7 @@ const showcaseImages = [
     position: 'right-[2%] top-[18%] w-[36%]',
   },
   {
-    src: '/Images/OreoShake1.jpg',
+    src: '/Hot & Cold Beverages/Mango Shake.jpg',
     alt: 'Oreo shake',
     label: 'Beverages',
     rotate: '-rotate-1',
@@ -117,7 +117,7 @@ export default function Hero() {
             className="mt-14 flex gap-10 border-t border-[#2d1810]/8 pt-8"
           >
             {[
-              { num: '27+', label: 'Dishes' },
+              { num: '45+', label: 'Dishes' },
               { num: '4', label: 'Chapters' },
               { num: '100%', label: 'Fresh Cooked' },
             ].map((stat) => (

@@ -70,9 +70,9 @@ export default function About() {
             {/* Feature image strip */}
             <div className="mt-10 grid grid-cols-3 gap-3">
               {[
-                '/Images/EggDish1.jpg',
-                '/Images/EggDish2.jpg',
-                '/Images/EggDish3.jpg',
+                '/other Photos/Dish Composition.jpg',
+                '/other Photos/Cover Photo.jpg',
+                '/other Photos/SavourySpoon_Hero_1.jpg',
               ].map((id) => (
                 <div key={id} className="aspect-square overflow-hidden rounded-2xl border-2 border-white shadow-md">
                   <img
