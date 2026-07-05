@@ -302,13 +302,13 @@ export const menuCategories: MenuCategory[] = [
     image: '/Fast Food & Appetizers/SavourySpoon_WaffleFries.jpg',
     tag: 'Snacks',
   },
-  {
-    name: 'Waffle Fries',
-    ingredients: 'Waffle Cut Potatoes, Seasoning',
-    method: 'Deep fry and serve hot.',
-    image: '/Fast Food & Appetizers/Waffle fries.jpg',
-    tag: 'Snacks',
-  },
+  // {
+  //   name: 'Waffle Fries',
+  //   ingredients: 'Waffle Cut Potatoes, Seasoning',
+  //   method: 'Deep fry and serve hot.',
+  //   image: '/Fast Food & Appetizers/Waffle fries.jpg',
+  //   tag: 'Snacks',
+  // },
 ],
   },
   {
