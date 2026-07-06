@@ -465,9 +465,9 @@ export const menuCategories: MenuCategory[] = [
   tag: 'Best Seller',
 },
   {
-    name: 'Spinach Paneer',
-    ingredients: 'Spinach, Paneer, Indian Spices',
-    method: 'Cook spinach gravy with paneer cubes and Indian spices.',
+    name: 'Paneer bhurji',
+    ingredients: 'Paneer, Onions, Tomatoes, Indian Spices',
+    method: 'Cook paneer with onions, tomatoes, and Indian spices.',
     image: '/Street Food/SavourySpoon_SpinachPaneer.jpg',
     tag: 'Healthy',
   },

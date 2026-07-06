@@ -47,7 +47,7 @@ export default function Contact() {
               {[
                 { icon: MapPin, label: 'Address', value: '526 Romford road' },
                 { icon: Phone, label: 'Phone', value: '07359 114572' },
-                { icon: Mail, label: 'Email', value: 'hello@savouryspoon.com' },
+                { icon: Mail, label: 'Email', value: 'Dheemahi.vc@gmail.com' },
               ].map((item) => (
                 <div
                   key={item.label}
